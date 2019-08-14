@@ -4,8 +4,14 @@ url = "https://mirrors.aliyun.com/pypi/simple/"
 verify_ssl = true
 
 [dev-packages]
+pytest = "*"
+isort = "*"
+flake8 = "*"
+pylint = "*"
+pytest-cov = "*"
 
 [packages]
+flask = "==1.1.1"
 
 [requires]
 python_version = "3.6"
