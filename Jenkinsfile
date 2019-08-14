@@ -8,7 +8,8 @@ pipeline {
             }
             post {
                 success {
-                    junit 'junit-report.xml' 
+                    junit 'junit-report.xml'
+                    archiveArtifacts 'dist/*'
                 }
             }
         }
