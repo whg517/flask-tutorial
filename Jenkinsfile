@@ -11,10 +11,13 @@ pipeline {
             }
             post {
                 success {
+                    echo 'I succeeeded!'
                     junit 'junit-report.xml'
                     archiveArtifacts 'dist/*'
                 }
-                always {
+            }
+            post {
+                                always {
                     echo 'Clean up workspace.'
                     deleteDir() /* clean up our workspace */
                 }
