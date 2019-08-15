@@ -24,7 +24,7 @@ pipeline {
             post {
                 success {
                     sh 'pip install -i https://mirrors.aliyun.com/pypi/simple/ twine'
-                    sh 'twine upload --skip-existing -u __token__ -p $PYPI_TOKEN dist/*'
+                    sh 'twine upload --repository-url https://test.pypi.org/legacy/ --skip-existing -u __token__ -p $PYPI_TOKEN dist/*'
                 }
             }
         }
