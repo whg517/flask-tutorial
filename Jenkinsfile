@@ -15,7 +15,8 @@ pipeline {
                     archiveArtifacts 'dist/*'
                 }
                 always {
-                    sh 'rm -rf dist build .tox *.egg-info *.xml'
+                    echo 'Clean up workspace.'
+                    deleteDir() /* clean up our workspace */
                 }
             }
         }
