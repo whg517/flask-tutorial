@@ -16,12 +16,6 @@ pipeline {
                     archiveArtifacts 'dist/*'
                 }
             }
-            post {
-                                always {
-                    echo 'Clean up workspace.'
-                    deleteDir() /* clean up our workspace */
-                }
-            }
         }
         stage("Upload2Pypi") {
             steps {
