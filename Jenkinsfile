@@ -19,12 +19,12 @@ pipeline {
         }
         stage("Upload2Pypi") {
             steps {
-                sh 'tox package'
+                sh 'tox -e package'
             }
             post {
                 success {
                     sh 'pip install -i https://mirrors.aliyun.com/pypi/simple/ twine'
-                    sh 'twine upload --skip-existing -u __token__ -p $PYPI_TOKEN'
+                    sh 'twine upload --skip-existing -u __token__ -p $PYPI_TOKEN dist/*'
                 }
             }
         }
