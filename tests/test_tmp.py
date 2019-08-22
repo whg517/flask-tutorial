@@ -14,4 +14,4 @@
 
 def test_tmp(client):
     response = client.get('/tmp')
-    assert b'xxx' == response.data
+    assert b'bbb' == response.data

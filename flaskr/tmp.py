@@ -17,4 +17,4 @@ bp = Blueprint('tmp', __name__)
 
 @bp.route('/tmp')
 def tmp():
-    return 'xxx'
+    return 'bbb'
